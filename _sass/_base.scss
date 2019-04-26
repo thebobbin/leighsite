@@ -1,0 +1,61 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+
+td:nth-child(1) {
+}
+
+td:nth-child(3) {
+  font-style: italic;
+}
+
+.container {
+  margin: auto!important;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  @media only screen and (max-width: 480px) {
+    font-size: 2em;
+  }
+}
+
+h1,
+h2 {
+  font-family: 'Taviraj', serif;
+}
+
+#instafeed {
+  max-width:1080px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 33.33333333333%;
+    background: white;
+
+    @media only screen and (max-width: 480px) {
+      width: 50%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
