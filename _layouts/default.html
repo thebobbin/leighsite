@@ -13,24 +13,27 @@
   </head>
 
   <body>
-    <section class="container row">
-      <nav class="col-xs-12">
-        <a href="/">Beers</a>
-        <!-- <a href="/about">About</a> -->
-        <a href="/photos">Photos</a>
-        <!-- <a href="/events">Events</a> -->
-        <a href="mailto:ndisley@yahoo.co.uk">Contact</a>
-      </nav>
-      <header class="col-xs-12">
-        <h1>THE BOBBIN</h1>
-      </header>
-    </section>
+    <div class="background-image"></div>
+    <div class="main-container">
+      <section class="container row">
+        <nav class="col-xs-12">
+          <a href="/">Beers</a>
+          <!-- <a href="/about">About</a> -->
+          <a href="/photos">Photos</a>
+          <!-- <a href="/events">Events</a> -->
+          <a href="mailto:ndisley@yahoo.co.uk">Contact</a>
+        </nav>
+        <header class="col-xs-12">
+          <h1>THE BOBBIN</h1>
+        </header>
+      </section>
 
-    <section class="container row">
-      <div class="content col-xs-12">
-        {{ content }}
-      </div>
-    </section>
+      <section class="container row">
+        <div class="content col-xs-12">
+          {{ content }}
+        </div>
+      </section>
+    </div>
   </body>
   <script>
     var Airtable = require('airtable');
