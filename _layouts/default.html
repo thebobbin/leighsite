@@ -5,8 +5,10 @@
     <title>The Bobbin</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Taviraj:500" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="{{ '/assets/javascript/main.js' | relative_url }}" ></script>
+    <script src="{{ '/assets/javascript/airtable.browser.js' | relative_url }}" ></script>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   </head>
 
@@ -30,4 +32,33 @@
       </div>
     </section>
   </body>
+  <script>
+    var Airtable = require('airtable');
+    var base = new Airtable({ apiKey: 'keyRH3P8jfewj7AVu' }).base('appcEztmUPjaxmpbo');
+
+    var loadBeers = function() {
+      $('#beers').empty();
+
+      base('Table 1').select({
+      sort: [
+        {field: 'Name', direction: 'asc'}
+      ]
+    }).eachPage(function page(records, fetchNextPage) {
+      records.forEach(function(record) {
+      console.log('Retrieved ', record.get('Name'));
+
+      var $beerInfo = $('<div>');
+      $beerInfo.append($('<h3 class=name>').text(record.get('Name')));
+      $beerInfo.append($('<span class=seperator>').text(' - '));
+      $beerInfo.append($('<span class=brewery>').text(record.get('Brewery')));
+      $beerInfo.append($('<span class=abv>').text(record.get('ABV')));
+      $beerInfo.append($('<span class=tasting-notes>').text(record.get('TastingNotes')));
+      $beerInfo.attr('data-record-id', record.getId());
+
+    $('#beers').append($beerInfo);
+  });
+});
+};
+loadBeers();
+  </script>
 </html>

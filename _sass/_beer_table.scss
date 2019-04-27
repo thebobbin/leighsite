@@ -1,0 +1,39 @@
+#beers {
+  margin: auto;
+
+  .name {
+    margin-right: 10px;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .seperator {
+    margin-right: 10px;
+  }
+
+  .brewery {
+  }
+
+  .abv {
+    float: right;
+  }
+
+  .tasting-notes {
+    clear: both;
+    text-align: left;
+  }
+
+  .seperator,
+  .brewery,
+  .abv {
+    margin-top: 33px;
+    margin-bottom: 10px;
+  }
+
+  .name,
+  .brewery,
+  .seperator,
+  .tasting-notes {
+    float: left;
+  }
+}

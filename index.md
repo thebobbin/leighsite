@@ -6,8 +6,9 @@ layout: default
 ---
 
 <div class="row center-xs">
-<div class="content col-xs-12 col-md-6">
-<h2>Coming Soon</h2>
-</div>
+  <div class="content col-xs-12 col-md-6">
+    <h3>Currently on the bar...</h3>
+    <div id="beers"></div>
+  </div>
 </div>
 
