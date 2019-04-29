@@ -6,7 +6,7 @@ permalink: /forthcoming-beers/
 
 <div class="row center-xs">
   <div class="content col-xs-12 col-md-6">
-    <h3>Currently on the bar...</h3>
+    <h3>Forthcoming beers...</h3>
     <div id="beers"></div>
   </div>
   </div>
