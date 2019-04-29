@@ -18,7 +18,7 @@ permalink: /forthcoming-beers/
   var loadBeers = function() {
     $('#beers').empty();
 
-    base('Table 2').select({
+    base('Forthcoming').select({
 sort: [
 {field: 'Name', direction: 'asc'}
 ]
