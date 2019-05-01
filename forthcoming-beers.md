@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Forthcoming beers
+title: Forthcoming Beers
 permalink: /forthcoming-beers/
 ---
 
