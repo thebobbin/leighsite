@@ -2,20 +2,11 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: #fff;
   margin: 0;
+  background-image: url("/assets/images/bb-background.png");
 }
 
 .main-container {
   padding: 10px;
-}
-
-.background-image {
-  height: 100%;
-  width: 100%;
-  background-image: url("/assets/images/bb-background.png");
-  opacity: 0.5;
-  display: block;
-  position: absolute;
-  z-index: -1;
 }
 
 header {
